@@ -1,0 +1,47 @@
+{
+  "development": {
+    "username": "jadeergroup_jadeerapp",
+    "password": "gitalwis@!@2021!",
+    "database": "jadeergroup_jadeerapp",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "freezeTableName": true,
+    "logging": false,
+    "define":{
+      "charset"     : "utf8mb4",
+      "collate"     : "utf8mb4_general_ci", 
+      "underscored" : true,
+      "timestamps"  : true
+    },
+    "dialectOptions": {
+            "useUTC": false,
+            "dateStrings": true,
+            "typeCast": true
+      },
+      "timezone": "+02:00"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "jadeergroup_jadeerapp",
+    "password": "gitalwis@!@2021!",
+    "database": "jadeergroup_jadeerapp",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false,
+    "freezeTableName": true,
+    "logging": false,
+    "define":{
+      "charset"     : "utf8mb4",
+      "collate"     : "utf8mb4_general_ci", 
+      "underscored" : true,
+      "timestamps"  : false
+    }
+  }
+}

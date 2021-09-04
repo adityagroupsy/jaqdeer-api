@@ -1,0 +1,32 @@
+{
+  "name": "init",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chokidar": "^3.3.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "date-and-time": "^0.14.2",
+    "debug": "~2.6.9",
+    "email-validator": "^2.0.4",
+    "express": "~4.16.1",
+    "express-basic-auth": "^1.2.0",
+    "fcm-node": "^1.6.1",
+    "http-errors": "^1.8.0",
+    "jade": "~1.11.0",
+    "jwt-redis": "^6.0.0",
+    "moment": "^2.29.1",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "phone": "^2.4.20",
+    "redis": "^3.0.2",
+    "sequelize": "^5.22.3",
+    "sequelize-cli": "^6.2.0"
+  }
+}
