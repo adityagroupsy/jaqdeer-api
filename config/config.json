@@ -29,8 +29,8 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "jadeergroup_jadeerapp",
-    "password": "gitalwis@!@2021!",
+    "username": "jadeergroup_db_user",
+    "password": "jadeergroup_jadeerapp",
     "database": "jadeergroup_jadeerapp",
     "host": "127.0.0.1",
     "dialect": "mysql",

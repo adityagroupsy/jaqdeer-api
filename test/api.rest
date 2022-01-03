@@ -9,6 +9,14 @@ Accept-Language : en
 
 ### 
 
+GET http://localhost:6003/user/about HTTP/1.1
+Authorization: Basic amFkZWVyOmphZGVlckAyMDIwIw==
+Content-Type : application\/x-www-form-urlencoded
+Accept-Language : en
+
+
+###
+
 GET https://jadeer-api.herokuapp.com/user/about HTTP/1.1
 Authorization: Basic amFkZWVyOmphZGVlckAyMDIwIw==
 Content-Type : application\/x-www-form-urlencoded
