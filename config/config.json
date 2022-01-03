@@ -29,10 +29,10 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "jadeergroup_db_user",
-    "password": "jadeergroup_jadeerapp",
+    "username": "jadeergroup_jadeerapp",
+    "password": "gitalwis@!@2021!",
     "database": "jadeergroup_jadeerapp",
-    "host": "127.0.0.1",
+    "host": "103.72.76.23",
     "dialect": "mysql",
     "operatorsAliases": false,
     "freezeTableName": true,
