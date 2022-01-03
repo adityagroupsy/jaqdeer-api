@@ -32,7 +32,7 @@
     "username": "jadeergroup_jadeerapp",
     "password": "gitalwis@!@2021!",
     "database": "jadeergroup_jadeerapp",
-    "host": "103.72.76.23",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false,
     "freezeTableName": true,

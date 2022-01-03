@@ -1,4 +1,4 @@
-POST http://jadeergroup.com:6003/user/send_forgot_password_code HTTP/1.1
+POST https://jadeer-api.herokuapp.com/user/send_forgot_password_code HTTP/1.1
 Authorization: Basic amFkZWVyOmphZGVlckAyMDIwIw==
 Content-Type : application\/x-www-form-urlencoded
 Accept-Language : en
@@ -6,3 +6,10 @@ Accept-Language : en
 {
     "email" : "ashirbadapanigrahi@gmail.com"
 }
+
+### 
+
+GET https://jadeer-api.herokuapp.com/user/about HTTP/1.1
+Authorization: Basic amFkZWVyOmphZGVlckAyMDIwIw==
+Content-Type : application\/x-www-form-urlencoded
+Accept-Language : en
