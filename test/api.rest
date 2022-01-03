@@ -1,0 +1,8 @@
+POST http://jadeergroup.com:6003/user/send_forgot_password_code HTTP/1.1
+Authorization: Basic amFkZWVyOmphZGVlckAyMDIwIw==
+Content-Type : application\/x-www-form-urlencoded
+Accept-Language : en
+
+{
+    "email" : "ashirbadapanigrahi@gmail.com"
+}
