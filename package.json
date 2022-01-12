@@ -23,6 +23,7 @@
     "morgan": "~1.9.1",
     "multer": "^1.4.2",
     "mysql2": "^2.2.5",
+    "nodemailer": "^6.7.2",
     "nodemon": "^2.0.7",
     "phone": "^2.4.20",
     "redis": "^3.0.2",
