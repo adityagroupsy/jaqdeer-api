@@ -2,11 +2,10 @@
 const express = require("express");
 var redis = require("redis");
 var JWTR = require("jwt-redis").default;
-var redisClient = redis
-  .createClient({
-    url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
-  })
-  .auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
+var redisClient = redis.createClient({
+  url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
+});
+redisClient.auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
 var jwtr = new JWTR(redisClient);
 const configJwt = require("../config/jwt.json");
 const controllers = require("../controllers/userController.js");

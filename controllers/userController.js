@@ -367,11 +367,12 @@ api.register = (req, res) => {
                                   .then((user) => {
                                     var redis = require("redis");
                                     var JWTR = require("jwt-redis").default;
-                                    var redisClient = redis
-                                      .createClient({
-                                        url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
-                                      })
-                                      .auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
+                                    var redisClient = redis.createClient({
+                                      url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
+                                    });
+                                    redisClient.auth(
+                                      "fVqHLTto8CS2wPttDOELp8jOeWCwJ3My"
+                                    );
                                     var jwtr = new JWTR(redisClient);
 
                                     var payload = {
@@ -497,11 +498,12 @@ api.register = (req, res) => {
                                 .then((saved_check) => {
                                   var redis = require("redis");
                                   var JWTR = require("jwt-redis").default;
-                                  var redisClient = redis
-                                    .createClient({
-                                      url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
-                                    })
-                                    .auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
+                                  var redisClient = redis.createClient({
+                                    url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
+                                  });
+                                  redisClient.auth(
+                                    "fVqHLTto8CS2wPttDOELp8jOeWCwJ3My"
+                                  );
                                   var jwtr = new JWTR(redisClient);
 
                                   var payload = {
@@ -631,8 +633,11 @@ api.login = (req, res) => {
       msg = langString[language_code].user_blocked;
       return res.status(421).send({ msg: msg, status: "421" });
     } else {
+      console.log("Finding Users");
       models.User.findOne({ where: { email: email, is_registered: 1 } }).then(
         (user) => {
+          console.log("Got User", user);
+
           if (!user) {
             msg = langString[language_code].login_wrong_password;
             return res.status(456).send({ msg: msg, status: "456" });
@@ -649,11 +654,11 @@ api.login = (req, res) => {
                 } else {
                   var redis = require("redis");
                   var JWTR = require("jwt-redis").default;
-                  var redisClient = redis
-                    .createClient({
-                      url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
-                    })
-                    .auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
+                  var redisClient = redis.createClient({
+                    url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
+                  });
+                  redisClient.auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
+
                   var jwtr = new JWTR(redisClient);
 
                   var payload = { user: user.id, device: device_id, type: 1 };
@@ -662,7 +667,6 @@ api.login = (req, res) => {
                     .sign(payload, configJwt.secret)
                     .then((myToken) => {
                       user.token = myToken;
-
                       models.Device.findOrCreate({
                         where: { device_id: device_id, user_model: 1 },
                         defaults: {
@@ -861,11 +865,10 @@ api.logout = async (req, res) => {
   let language_code = req.language;
   var redis = require("redis");
   var JWTR = require("jwt-redis").default;
-  var redisClient = redis
-    .createClient({
-      url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
-    })
-    .auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
+  var redisClient = redis.createClient({
+    url: "redis://redis-18481.c256.us-east-1-2.ec2.cloud.redislabs.com:18481",
+  });
+  redisClient.auth("fVqHLTto8CS2wPttDOELp8jOeWCwJ3My");
   var jwtr = new JWTR(redisClient);
 
   let msg = "";

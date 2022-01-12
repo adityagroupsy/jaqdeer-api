@@ -3,22 +3,17 @@
     "username": "jadeergroup_jadeerapp",
     "password": "gitalwis@!@2021!",
     "database": "jadeergroup_jadeerapp",
-    "host": "127.0.0.1",
+    "host": "103.72.76.23",
     "dialect": "mysql",
+    "operatorsAliases": false,
     "freezeTableName": true,
     "logging": false,
     "define": {
       "charset": "utf8mb4",
       "collate": "utf8mb4_general_ci",
       "underscored": true,
-      "timestamps": true
-    },
-    "dialectOptions": {
-      "useUTC": false,
-      "dateStrings": true,
-      "typeCast": true
-    },
-    "timezone": "+02:00"
+      "timestamps": false
+    }
   },
   "test": {
     "username": "root",
